@@ -5,6 +5,7 @@ from keras import layers, models, optimizers, regularizers
 from keras import backend as K
 
 
+
 class ReplayBuffer:
     """Fixed-size buffer to store experience tuples."""
 
