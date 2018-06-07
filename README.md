@@ -1,35 +1,19 @@
-# Deep RL Quadcopter Controller
+## Udacity.com's Teach a Quadcopter to fly project
 
-*Teach a Quadcopter How to Fly!*
+I implemented and Actor-Critic algorithm inspired by the DDPG (Deep Deterministic Policy Gradient) in Keras with a Tensorflow backend whose goal is to teach a quadcopter to take off.
 
-In this project, you will design an agent to fly a quadcopter, and then train it using a reinforcement learning algorithm of your choice! 
+The quadcopter environment is a simulation provided by udacity.
 
-## Project Instructions
+The agent controls the rotor speed of all four rotors simultaneously. It is possible to have the agent control all 4 seperately, but I simplified the problem by having them all synchronized.
 
-1. Clone the repository and navigate to the downloaded folder.
+I limited the action-state space to the z-position. The reward function uses only the z-position and velocity.
 
-```
-git clone https://github.com/udacity/RL-Quadcopter-2.git
-cd RL-Quadcopter-2
-```
+Unfortunately I was unable to get the agent to learn a proper solution. The ones it finds are either a crash-as-fast-as-possible or put-the-pedal-to-the-metal types.
 
-2. Create and activate a new environment.
 
-```
-conda create -n quadcop python=3.6 matplotlib numpy pandas
-source activate quadcop
-```
 
-3. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `quadcop` environment. 
-```
-python -m ipykernel install --user --name quadcop --display-name "quadcop"
-```
+More info regarding tuning hyperparameters and understanding the underlying model can be found here:
 
-4. Open the notebook.
-```
-jupyter notebook Quadcopter_Project.ipynb
-```
+https://towardsdatascience.com/reinforcement-learning-w-keras-openai-actor-critic-models-f084612cfd69
 
-5. Before running code, change the kernel to match the `quadcop` environment by using the drop-down menu (**Kernel > Change kernel > quadcop**). Then, follow the instructions in the notebook.
-
-6. You will likely need to install more pip packages to complete this project.  Please curate the list of packages needed to run your project in the `requirements.txt` file in the repository.
+http://pemami4911.github.io/blog/2016/08/21/ddpg-rl.html
