@@ -17,3 +17,5 @@ More info regarding tuning hyperparameters and understanding the underlying mode
 https://towardsdatascience.com/reinforcement-learning-w-keras-openai-actor-critic-models-f084612cfd69
 
 http://pemami4911.github.io/blog/2016/08/21/ddpg-rl.html
+
+https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-7-action-selection-strategies-for-exploration-d3a97b7cceaf
